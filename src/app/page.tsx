@@ -1,101 +1,63 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image'
+import React from 'react'
+import { FaArrowDown } from "react-icons/fa6";
 
-export default function Home() {
+function page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <>
+    <div className=' flex justify-center pr-[60px]'>
+      <div className='flex h-screen w-[1056px] justify-between '>      
+        <div className='dmSans text-[60px] font-medium tracking-tight w-[360px] pt-[300px] leading-[58px]'>Hello, I&apos;m Aqsa Saeed. </div>
+        <div className='dmSans text-[28px] tracking-tight w-[580px] text-[#606060] pt-[380px] leading-[37px]'>A student web developer specializing in front-end technologies and interactive UI design.</div>
+      </div>
     </div>
-  );
+    <div className='w-[1056px] m-auto -mt-28'>
+      <div className='-ml-8'>
+        <FaArrowDown className='text-4xl'/>
+      </div>
+    </div>
+    <div className='flex justify-center mt-[140px]'>
+      <div className='h-[440px] w-[1120px] border-b-2 flex justify-between gap-6 border-black'>
+        <div className='w-[520px] '>
+          <h1 className='text-[21px] font-medium inter tracking-normal text-black'>01/ RESUME BUILDER</h1>
+          <p className='inter mt-5 font-normal text-[21px] tracking-normal text-pretty text-black leading-[25px]'>Developed a dynamic, resume webpage with dynamic form inputs that allow users to add personal information, skills, work history, and education seamlessly.</p>
+          <p className='inter font-normal text-[18px] text-balance text-slate-700 mt-10 leading-4'>Built with HTML, CSS, and JavaScript to create custom, downloadable resumes.</p>
+          <Link target='_blank' href={'https://akksaa.github.io/resume/'}> <p className='inter font-medium text-[20px] text-black underline mt-14'>View and generate custom resume now ↗</p> </Link>
+        </div>
+        <div className='h-[365px] w-[640px]'>
+          <Image src={'/pp1.png'} alt={'project 1: resume'} height={1088} width={850}/>
+        </div>
+      </div>
+    </div>
+    <div className='flex justify-center mt-[140px]'>
+      <div className='h-[440px] w-[1120px] border-b-2 flex justify-between gap-6 border-black'>
+        <div className='w-[520px] '>
+          <h1 className='text-[21px] font-medium inter tracking-normal text-black'>02/ MY PORTFOLIO</h1>
+          <p className='inter mt-5 font-normal text-[21px] tracking-normal text-pretty text-black leading-[25px]'>This responsive Portfolio showcases my skills and passion that strikes a perfect balance between professionalism and approachability.</p>
+          <p className='inter font-normal text-[18px] text-balance text-slate-700 mt-10 leading-4'>Crafted with Next.js and Tailwind CSS embodies a warm, inviting aesthetic with its soft, layered background and well-structured layout. </p>
+          <Link target='_blank' href={'https://github.com/Akksaa/My-Portfolio.git'}> <p className='inter font-medium text-[20px] text-black underline mt-14'>Available on Github →</p> </Link>
+        </div>
+        <div className='h-[365px] w-[640px]'>
+          <Image src={'/pp2.png'} alt={'project 2: Portfolio'} className='shadow-xl' height={1088} width={850}/>
+        </div>
+      </div>
+    </div>
+    <div className='flex justify-center mt-[140px]'>
+      <div className='h-[440px] w-[1120px] border-b-2 flex justify-between gap-6 border-black'>
+        <div className='w-[520px] '>
+          <h1 className='text-[21px] font-medium inter tracking-normal text-black'>03/ CLONED GIAIC WEBSITE</h1>
+          <p className='inter mt-5 font-normal text-[21px] tracking-normal text-pretty text-black leading-[25px]'>Developed a fully responsive clone of the GIAIC website that focuses on layout precision and user experience.</p>
+          <p className='inter font-normal text-[18px] text-balance text-slate-700 mt-10 leading-4'>Using Next.js and Tailwind CSS, mirroring the original design and functionality. </p>
+          <Link target='_blank' href={'https://github.com/Akksaa/GIAIC-web.git'}> <p className='inter font-medium text-[20px] text-black underline mt-14'>This project is on Github →</p> </Link>
+        </div>
+        <div className='h-[365px] w-[640px]'>
+          <Image src={'/pp3.png'} alt={'project 3: GIAIC web'} height={1088} width={850}/>
+        </div>
+      </div>
+    </div>
+    </>   
+  )
 }
+
+export default page

@@ -1,6 +1,28 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google"
+import {Roboto_Flex} from "next/font/google"
+import {Inter} from "next/font/google"
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400','500'],
+  variable: '--font-inter'
+})
+const robotoFlex = Roboto_Flex({
+  subsets: ['latin'],
+  weight: ["400", "600"],
+  variable: '--font-robotoflex'
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400','600'],
+  variable: '--font-dmsans'
+})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +48,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${robotoFlex.variable} ${inter.variable} antialiased`}
       >
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
