@@ -3,10 +3,16 @@ import localFont from "next/font/local";
 import { DM_Sans } from "next/font/google"
 import {Roboto_Flex} from "next/font/google"
 import {Inter} from "next/font/google"
+import {Parisienne} from "next/font/google"
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+const parisienne = Parisienne({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-pari'
+})
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400','500'],
@@ -48,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${robotoFlex.variable} ${inter.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${robotoFlex.variable} ${inter.variable} ${parisienne.variable} antialiased`}
       >
         <Header/>
         {children}
